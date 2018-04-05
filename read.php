@@ -19,17 +19,17 @@
  		<table>
  			<tr>
  				<th>Serial</th>
-                        <th>firstname</th>
-                        <th>lastname</th>
-                        <th>address</th> 
-                        <th>skill</th>
-                        <th>cgpa</th>
-                        <th>current_status</th>
-                        <th>educational_status</th>
- 				<th>userName</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Address</th> 
+                        <th>Skill</th>
+                        <th>CGPA</th>
+                        <th>Current_Status</th>
+                        <th>Educational_Status</th>
+ 				<th>UserName</th>
                         <th>Email</th>
- 				<th>phone</th>
-                        <th>image</th>
+ 				<th>Phone</th>
+                 
  			</tr>
 
  			<?php  
@@ -50,7 +50,7 @@
                    <td><?php echo $row['username']; ?></td>
                    <td><?php echo $row['email']; ?></td>
                    <td><?php echo $row['phone']; ?></td>
-                   <td><img src="uploads/<?php echo $row['image'];?>" height="100px" width="100px"/></td>
+                  
 
                    <td>
                    		<a href="update.php?id=<?php echo $row['id'];?>">Edit</a>
