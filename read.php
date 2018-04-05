@@ -21,7 +21,7 @@
  				<th>Serial</th>
                         <th>Firstname</th>
                         <th>Lastname</th>
-                        <th>Address</th> 
+                        <th>Address</th>
                         <th>Skill</th>
                         <th>CGPA</th>
                         <th>Current_Status</th>
