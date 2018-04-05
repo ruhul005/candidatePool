@@ -56,10 +56,7 @@
                    		<a href="update.php?id=<?php echo $row['id'];?>">Edit</a>
                    		
                    </td>
-                   <td>
-                              <a href="advertise.php?id=<?php echo $row['id'];?>">advertise</a>
-                              
-                   </td>
+                   
              </tr>
             
 
