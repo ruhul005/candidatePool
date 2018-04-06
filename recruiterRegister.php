@@ -2,17 +2,14 @@
 
    include "connection.php";
    //if (isset($_POST['submit'])) {  //register form user in this portion
-   	$username=$_POST["user"];
+   	//$req_id=$_POST["req_id"];
    	$email=$_POST["email"];
    	$pass=$_POST["pass"];
-   	$phone=$_POST["phone"];
    	$firstname=$_POST["firstname"];
    	$lastname=$_POST["lastname"];
-   	//$NID=$_POST["NID"];
-   	//$bkash=$_POST["bkash"];
-   	//$rocket=$_POST["rocket"];
-   	//$bank=$_POST["bank"];
-   	//$educational_status=$_POST["educational_status"];
+    $companyname=$_POST["companyname"];
+
+   	
 /* as we are not using photo anymore.
 
     Photo signUp part
@@ -28,18 +25,22 @@
    	}
    	move_uploaded_file($temp, "uploads/".$name);
     */
-   	$sql1="SELECT * FROM user WHERE email='$email' OR username='$username'";
+   	$sql1="SELECT * FROM recruiter WHERE email='$email'";
 	$result1=$con->query($sql1);
+    echo "checked";
 	
 	if ($result1->num_rows > 0) {             //check email address if exist
 		echo "This email or username is already exist";
 		exit;
 
 	}else{
-			$sql="INSERT INTO user VALUES ('','','$firstname','$lastname','$username','$email','$pass','$phone','','','','','')";
-	   	    $result2=$con->query($sql);
-	   	    if($result2){
+			$sql2="INSERT INTO recruiter VALUES ('',$firstname','$lastname','$email','$pass','$companyname')";
+            
+	   	    $result2=$con->query($sql2);
+            //echo"$result";
+	   	    if($con->query($sql2)){
 	   		//echo "Registration Successfully";
+                
 	   	    	header("location:index.html");
 	   		}else{
 	   			echo "Registration Failed";
