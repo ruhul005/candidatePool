@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 05, 2018 at 07:04 PM
+-- Generation Time: Apr 06, 2018 at 05:26 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -25,41 +25,37 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `advertise`
+-- Table structure for table `admin`
 --
 
-CREATE TABLE `advertise` (
-  `id` int(11) NOT NULL,
-  `advertise_name` varchar(500) NOT NULL,
-  `user_id` int(11) NOT NULL
+CREATE TABLE `admin` (
+  `name` varchar(20) DEFAULT NULL,
+  `admin_email` varchar(20) DEFAULT NULL,
+  `id` varchar(20) DEFAULT NULL,
+  `admin_pass` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `advertise`
+-- Dumping data for table `admin`
 --
 
-INSERT INTO `advertise` (`id`, `advertise_name`, `user_id`) VALUES
-(2, 'how bd', 4),
-(3, 'wow bd', 4),
-(4, 'hfk', 4),
-(5, 'gfdjs', 4),
-(6, 'fdhasg', 4),
-(7, 'fok', 4),
-(8, 'how', 8),
-(9, 'kdfk', 8),
-(10, 'h', 8),
-(11, 'hokl', 8),
-(12, 'jcklds', 8),
-(13, 'mow', 8),
-(14, 'h', 7),
-(15, 'hsiai', 4),
-(16, 'dhasjk', 4),
-(17, 'dnkas', 4),
-(18, 'kol', 4),
-(19, 'wow bd', 9),
-(20, '50 $ per day', 10),
-(21, '4$ A DAY', 11),
-(22, 'i am Super man', 12);
+INSERT INTO `admin` (`name`, `admin_email`, `id`, `admin_pass`) VALUES
+('Owner', 'admin', '1', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recruiter`
+--
+
+CREATE TABLE `recruiter` (
+  `req_id` int(3) NOT NULL,
+  `first_name` varchar(30) NOT NULL,
+  `last_name` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `pass` varchar(20) NOT NULL,
+  `company_name` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -98,18 +94,11 @@ INSERT INTO `user` (`id`, `image`, `firstname`, `lastname`, `username`, `email`,
 (9, 'Tulips.jpg', 'ert', 'rtt', 'rtt', 't@gmail.com', '1234', 12234454, '', '0', '0', '', ''),
 (10, 'Advertise.png', 'Ruhul', 'Amin', 'rrrr', '123@gmail.com', '123456', 1234567890, '', '0', '0', '', ''),
 (11, 'platform.jpg', 'KAMAL', 'SAIDI', 'SSS', '1234@gmail.com', '112233', 1243567, '', '', '', '', ''),
-(12, '', 'ash', 'ilam', 'ruhulamin', '12345@gmail.com', '12345', 2345, 'dhaka', 'superman', '4.00', 'employeed', 'null');
+(12, '', 'ash', 'ilam', 'ruhulamin', '12345@gmail.com', '12345', 2345, 'dhaka', 'superman', '4.00', 'Employed', 'null');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `advertise`
---
-ALTER TABLE `advertise`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `user`
@@ -122,26 +111,10 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `advertise`
---
-ALTER TABLE `advertise`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
---
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `advertise`
---
-ALTER TABLE `advertise`
-  ADD CONSTRAINT `advertise_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
