@@ -16,10 +16,11 @@
 		<td><h2>educational_status</h2></td>
 		<tr>
 <?php
-$host="localhost";   
+/*$host="localhost";   
  	$user="root";
-    $pass="root";
-    $db_name="newviewww";    
+    $pass="";
+    $db_name="newviewww";  */
+    include "connection.php";
 
    $con=new mysqli($host,$user,$pass,$db_name);
    if ($con->connect_error) {
