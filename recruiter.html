@@ -13,7 +13,7 @@
         <div class="container">
            
             <header>
-                <h1>user Login and Registration</h1>
+                <h1>Recruiter Login and Registration</h1>
 				
             </header>
             <section>				
@@ -22,7 +22,7 @@
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-                            <form  action="login.php" autocomplete="on" method="post"> 
+                            <form  action="recruiterLogin" autocomplete="on" method="post"> 
                                 <h1>Log in</h1> 
                                 <p> 
                                     <label for="username" class="uname" > Your email </label>
@@ -50,7 +50,7 @@
                         </div>
 
                         <div id="register" class="animate form">
-                            <form  action="register.php" autocomplete="on" method="post" enctype="multipart/form-data"> 
+                            <form  action="recruiterRegister.php" autocomplete="on" method="post" enctype="multipart/form-data"> 
                                 <h1> Sign up </h1> 
                                 <p>
                                        <!-- commented out for profile photo
@@ -68,10 +68,7 @@
                                     <label for="usernamesignup" class="uname" >last name</label>
                                     <input id="usernamesignup" name="lastname" required="required" type="text" placeholder="lastname" />
                                 </p>
-                                <p> 
-                                    <label for="usernamesignup" class="uname" >Your username</label>
-                                    <input id="usernamesignup" name="user" required="required" type="text" placeholder="username" />
-                                </p>
+                                
                                 <p> 
                                     <label for="emailsignup" class="youmail"  > Your email</label>
                                     <input id="emailsignup" name="email" required="required" type="email" placeholder="example@gmail.com"/> 
@@ -81,9 +78,10 @@
                                     <input id="passwordsignup" name="pass" required="required" type="password" placeholder="eg.123xyz"/>
                                 </p>
                                 <p> 
-                                    <label for="passwordsignup_confirm" class="youpasswd" >phone number </label>
-                                    <input id="passwordsignup_confirm" name="phone" required="required" type="number" placeholder="eg.01xxxxxxxxx"/>
+                                    <label for="companyname" class="companyname" >Company Name </label>
+                                    <input id="companyname" name="companyname" required="required" type="text" placeholder="Platform Corp."/>
                                 </p>
+                                
                                 <p class="signin button"> 
 									<input type="submit" value="Sign up" name="submit" /> 
 								</p>
