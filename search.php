@@ -8,11 +8,13 @@ if(isset($_POST['search']))
     $id = $_POST['id'];
     
     // connect to mysql
+    /*
       $host="localhost";  ///connected server index,delete,login,view,logout,read,update
  	$user="root";
     $pass="root";
     $db_name="newviewww";   /// Database name view
-
+    */
+    include "connection.php";
 
    $con=new mysqli($host,$user,$pass,$db_name);
    if ($con->connect_error) {

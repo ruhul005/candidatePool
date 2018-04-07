@@ -47,4 +47,29 @@ echo"</tr>";
 	
 }
 ?>
+            
+         <!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title> PHP DELETE DATA </title>
+ 
+
+    </head>
+
+    <body>
+
+        <form action="delete.php" method="post">
+
+            ID TO DELETE:&nbsp;<input type="text" name="id" required><br><br>
+
+            <input type="submit" name="delete" value="Delete Data">
+
+        </form>
+
+    </body>
+
+</html>   
  

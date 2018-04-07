@@ -9,7 +9,7 @@
     		
     		echo "Please enter email and password";
     	}else{
-	    	$sql="SELECT * FROM user WHERE admin_email='$email' AND admin_pass='$password'";
+	    	$sql="SELECT * FROM admin WHERE admin_email='$email' AND admin_pass='$password'";
 			$result=$con->query($sql);
 			$row = $result->fetch_assoc();
 		   	if($result->num_rows==1){
