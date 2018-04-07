@@ -1,5 +1,5 @@
  <?php
-
+//updated
 // php code to search data in mysql database and set it in input text
 
 if(isset($_POST['search']))
@@ -114,7 +114,7 @@ else{
         Cgpa:<input type="text" name="cgpa" value="<?php echo $cgpa;?>"><br><br>
 		Current_Status:<input type="text" name="current_status" value="<?php echo $cur_st;?>"><br><br>
 		Educational_Status:<input type="text" name="educational_status" value="<?php echo $edu_st;?>"><br><br> 
-
+        
         <input type="submit" name="search" value="Search">
 
            </form>
