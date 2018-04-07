@@ -1,4 +1,4 @@
-
+<!-- This page will be view from admin level-->
 <table style="width:600px; margin:auto; " border="5px">
        <tr><th colspan="12"><h1>User Record</h1></tr></th>
         <tr>
@@ -16,10 +16,7 @@
 		<td><h2>educational_status</h2></td>
 		<tr>
 <?php
-/*$host="localhost";   
- 	$user="root";
-    $pass="";
-    $db_name="newviewww";  */
+
     include "connection.php";
 
    $con=new mysqli($host,$user,$pass,$db_name);

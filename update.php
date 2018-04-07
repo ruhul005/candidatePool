@@ -79,11 +79,11 @@
         <tr>
 			<td>current_status:</td>
             
-			<td><input type="text" name="current_status" value="<?php echo $row['current_status']?>"></td>
+			<td><input type="text"placeholder="employeed/unemployeed/want to switch" name="current_status" value="<?php echo $row['current_status']?>"></td>
 		</tr>
 		<tr>
 			<td>educational_status:</td>
-			<td><input type="text" placeholder="employeed/unemployeed/want to switch" name="educational_status" value="<?php echo $row['educational_status']?>"></td>
+			<td><input type="text"  name="educational_status" value="<?php echo $row['educational_status']?>"></td>
 		</tr>
 		<tr>
 			<td></td>

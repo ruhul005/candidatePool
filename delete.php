@@ -9,13 +9,6 @@ if(isset($_POST['delete']))
     // get id to delete
     $id = $_POST['id'];
     
-    // connect to mysql
-    /*
-     $host="localhost";  ///connected server index,delete,login,view,logout,read,update
- 	$user="root";
-    $pass="root";
-    $db_name="newviewww";   /// Database name view
-    */
     include "connection.php";
 
    $con=new mysqli($host,$user,$pass,$db_name);
@@ -39,29 +32,3 @@ if(isset($_POST['delete']))
 }
 
 ?>
-
-<!--<!DOCTYPE html>
-
-<html>
-
-    <head>
-
-        <title> PHP DELETE DATA </title>
- 
-
-    </head>
-
-    <body>
-
-        <form action="delete.php" method="post">
-
-            ID TO DELETE:&nbsp;<input type="text" name="id" required><br><br>
-
-            <input type="submit" name="delete" value="Delete Data">
-
-        </form>
-
-    </body>
-
-</html>
--->

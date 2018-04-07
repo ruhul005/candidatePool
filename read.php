@@ -18,7 +18,7 @@
  <a href="logout.php">Log Out</a>
  		<table>
  			<tr>
- 				<th>Serial</th>
+ 				<!--<th>Serial</th>-->
                         <th>Firstname</th>
                         <th>Lastname</th>
                         <th>Address</th>
@@ -39,7 +39,7 @@
              ?>
 
              <tr>
-                   <td><?php echo $i; ?></td>
+                   <!--<td><?php echo $i; ?></td>-->
                    <td><?php echo $row['firstname']; ?></td>
                    <td><?php echo $row['lastname']; ?></td>
                    <td><?php echo $row['address']; ?></td>

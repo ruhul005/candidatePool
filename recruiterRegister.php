@@ -1,9 +1,7 @@
 <?php 
 
    include "connection.php";
-   //if (isset($_POST['submit'])) {  //register form user in this portion
-   	//$req_id=$_POST["req_id"];
-    //$req_id++;
+   
    	$email=$_POST["email"];
    	$pass=$_POST["pass"];
    	$firstname=$_POST["firstname"];
@@ -25,8 +23,8 @@
 			$sql="INSERT INTO recruiter VALUES ('$firstname','$lastname','$email','$pass','$companyname')";
 	   	    $result=$con->query($sql);
 	   	    if($result){
-	   		//echo "Registration Successfully";
-	   	    	header("location:recruiterView.php");
+	   		echo "Registration Successfully";
+	   	    	header("location:recruiter.html");
 	   		}else{
 	   			echo "Registration Failed";
 	   			 }
