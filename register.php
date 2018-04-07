@@ -37,8 +37,8 @@
 
 	}else{
 			$sql="INSERT INTO user VALUES ('','','$firstname','$lastname','$username','$email','$pass','$phone','','','','','')";
-	   	    $result2=$con->query($sql);
-	   	    if($result2){
+	   	    $result=$con->query($sql);
+	   	    if($result){
 	   		//echo "Registration Successfully";
 	   	    	header("location:index.html");
 	   		}else{
