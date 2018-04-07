@@ -22,7 +22,7 @@ if(isset($_POST['search']))
    }
     
     // mysql search query
-    $query = "SELECT `firstname`, `lastname`,`username`, `email`,`phone`,`address`,`skill` FROM `user` WHERE `id` = $id LIMIT 1";
+    $query = "SELECT `firstname`, `lastname`,`username`, `email`,`phone`,`address`,`skill`,`cgpa` FROM `user` WHERE `id` = $id LIMIT 1";
     
     $result = mysqli_query($con, $query);
     
@@ -39,6 +39,8 @@ if(isset($_POST['search']))
 		 $phone = $row['phone'];
 		  $add = $row['address'];
 		   $skill = $row['skill'];
+          $cgpa = $row['cgpa'];
+          
 		    
       }  
     }
@@ -54,6 +56,7 @@ if(isset($_POST['search']))
 		    $phone = "";
 		    $add = "";
 		    $skill = "";
+            $cgpa = "";
     }
     
     
@@ -71,6 +74,7 @@ else{
     $phone = "";
     $add = "";
     $skill = "";
+    $cgpa = "";
 }
 
 
@@ -101,6 +105,7 @@ else{
 		Phone Number:<input type="text" name="phone" value="<?php echo $phone;?>"><br><br>
 		Address:<input type="text" name="address" value="<?php echo $add;?>"><br><br>
 		Skill:<input type="text" name="skill" value="<?php echo $skill;?>"><br><br>
+        Cgpa:<input type="text" name="cgpa" value="<?php echo $cgpa;?>"><br><br>
 
         <input type="submit" name="search" value="Search">
 
