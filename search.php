@@ -22,7 +22,7 @@ if(isset($_POST['search']))
    }
     
     // mysql search query
-    $query = "SELECT `firstname`, `lastname`,`username`, `email`,`phone`,`address`,`skill`,`cgpa` FROM `user` WHERE `id` = $id LIMIT 1";
+    $query = "SELECT `firstname`, `lastname`,`username`, `email`,`phone`,`address`,`skill`,`cgpa`,`current_status`,`educational_status` FROM `user` WHERE `id` = $id LIMIT 1";
     
     $result = mysqli_query($con, $query);
     
@@ -40,6 +40,8 @@ if(isset($_POST['search']))
 		  $add = $row['address'];
 		   $skill = $row['skill'];
           $cgpa = $row['cgpa'];
+		  $cur_st = $row['current_status'];
+		  $edu_st = $row['educational_status'];
           
 		    
       }  
@@ -57,6 +59,8 @@ if(isset($_POST['search']))
 		    $add = "";
 		    $skill = "";
             $cgpa = "";
+			$cur_st = "";
+		    $edu_st = "";
     }
     
     
@@ -75,6 +79,8 @@ else{
     $add = "";
     $skill = "";
     $cgpa = "";
+	$cur_st = "";
+	$edu_st = "";
 }
 
 
@@ -106,6 +112,8 @@ else{
 		Address:<input type="text" name="address" value="<?php echo $add;?>"><br><br>
 		Skill:<input type="text" name="skill" value="<?php echo $skill;?>"><br><br>
         Cgpa:<input type="text" name="cgpa" value="<?php echo $cgpa;?>"><br><br>
+		Current_Status:<input type="text" name="current_status" value="<?php echo $cur_st;?>"><br><br>
+		Educational_Status:<input type="text" name="educational_status" value="<?php echo $edu_st;?>"><br><br> 
 
         <input type="submit" name="search" value="Search">
 
