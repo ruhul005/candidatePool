@@ -2,7 +2,7 @@
     
     $host="localhost";  ///connected server index,delete,login,view,logout,read,update
  	$user="root";
-    $pass="";
+    $pass="root";
     $db_name="newviewww";   /// Database name view
 
 
